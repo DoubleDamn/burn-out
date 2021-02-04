@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src/"]
+      }
+    }
+  },
+  "plugins": ["prettier", "testing-library"],
+  "rules": {
+    "ordered-imports": 0,
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": 0,
+    "react/button-has-type": 1,
+    "prettier/prettier": "error",
+    "no-undef": 1,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "testing-library/no-debug": "error"
+  },
+  "overrides": [
+    {
+      "files": ["src/setupTests.js", "webpack.config.js", "**/*.test.{js,jsx}", "**/test**"],
+      "rules": {
+        "import/prefer-default-export": 0,
+        "react/prop-types": 0,
+        "react/jsx-props-no-spreading": 0
+      }
+    }
+  ]
+}
