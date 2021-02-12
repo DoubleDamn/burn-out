@@ -4,7 +4,7 @@
     "node": true,
     "es6": true
   },
-  "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react"],
+  "extends": ["prettier", "prettier/react"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -17,10 +17,10 @@
     "ordered-imports": 0,
     "import/prefer-default-export": 0,
     "react/jsx-filename-extension": 0,
-    "react/button-has-type": 1,
+    "arrow-body-style": 0,
     "prettier/prettier": "error",
     "no-undef": 1,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    // "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "testing-library/no-debug": "error"
   },
   "overrides": [
