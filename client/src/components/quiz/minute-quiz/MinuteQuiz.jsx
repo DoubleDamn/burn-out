@@ -1,9 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Container } from '@material-ui/core';
 import cl from 'classnames';
-import './MinuteTest.scss';
 
-export const MinuteTest = () => {
+import './MinuteQuiz.scss';
+
+export const MinuteQuiz = () => {
   const [time, setTime] = useState(0);
   const [resultTime, setResultTime] = useState('00.0');
   const [isActive, setActive] = useState(false);

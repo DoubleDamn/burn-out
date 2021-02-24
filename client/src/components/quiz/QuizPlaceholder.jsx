@@ -1,18 +1,8 @@
-import React, { useCallback, useState } from 'react';
-import {
-  LinearProgress,
-  Button,
-  CssBaseline,
-  TextField,
-  FormControlLabel,
-  Checkbox,
-  Box,
-  Grid,
-  Typography,
-  Container,
-} from '@material-ui/core';
+import React, { useCallback, useEffect, useState } from 'react';
+import { LinearProgress, Button, Box, Typography, Container } from '@material-ui/core';
 
-import './TestPlaceholder.scss';
+import './QuizPlaceholder.scss';
+import { getJourneyId } from '../../services/quizRequests';
 
 const TEST_ANSWER = [
   'Никогда',
@@ -33,8 +23,15 @@ const arr = [
   'Очень часто',
   'Ежедневно',
 ];
-export const TestPlaceholder = () => {
+
+export const QuizPlaceholder = ({ quiz }) => {
   const [questionNum, setQuestionNum] = useState(1);
+  useEffect(async () => {
+    console.log(quiz, quiz.id);
+    const jorneyId = await getJourneyId(quiz.id);
+    console.log(jorneyId);
+  }, [quiz]);
+
   const handleSubmit = () => {};
   const handleClick = useCallback(() =>
     questionNum === arr.length ? handleSubmit() : setQuestionNum(prev => prev + 1),

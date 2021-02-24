@@ -2,7 +2,8 @@
   "parser": "babel-eslint",
   "env": {
     "node": true,
-    "es6": true
+    "es6": true,
+    "browser": true
   },
   "extends": ["prettier", "prettier/react"],
   "settings": {
@@ -20,7 +21,6 @@
     "arrow-body-style": 0,
     "prettier/prettier": "error",
     "no-undef": 1,
-    // "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "testing-library/no-debug": "error"
   },
   "overrides": [

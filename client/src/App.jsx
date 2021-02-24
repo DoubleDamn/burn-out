@@ -1,15 +1,13 @@
 import React from 'react';
-import { TestPlaceholder } from './components/tests/TestPlaceholder';
-import { Header } from './components/header/Header';
-import { MinuteTest } from './components/tests/MinuteTest';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoute from './app/routes';
 
 const App = () => {
+  //TODO add auth here
   return (
-    <>
-      <Header />
-      <TestPlaceholder />
-      <MinuteTest />
-    </>
+    <Router>
+      <AppRoute />
+    </Router>
   );
 };
 
